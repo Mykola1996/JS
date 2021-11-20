@@ -9,108 +9,132 @@
 </head>
 <body>
 
-
 <script>
 
-    // --  template1.1
-    //  let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-    //  document.write(`<ul>`)
-    // // for (let i = 0; i < listOfItems.length; i++){
-    // //   document.write(`<li>${listOfItems[i]}</li>`)
-    // // }
-    //  for (const el of listOfItems) {
-    //    document.write(`<li>${el}</li>`)
-    //  }
-    // document.write(`</ul>`);
+    // task 1
 
+    let num = [1, 2, 3, 4, 5];
+    let text = ['one', 'two', 'three', 'four', 'five'];
+    let all = [true, false, 'six', 7, 8];
+    console.log(num);
+    console.log(text);
+    console.log(all);
 
-    // --  template2.1; 2.2
+    // task 2
 
-    let simpsons = [
-        {
-            name: 'Bart',
-            surname: 'Simpson',
-            age: 10,
-            info: 'Бартолом\'ю ДжоДжо «Барт» Сімпсон (англ. Bartholomew JoJo «Bart» Simpson) — один із головних героїв мультиплікаційного серіалу Сімпсони. Барт — найстарша дитина Гомера і Мардж Сімпсон. У нього також є дві молодші сестри — Ліса і Меґґі. Барт є втіленням образу бешкетника та посереднього учня у школі. Разом зі своїм батьком Барт є одним із найвідоміших персонажів у цьому серіалі.',
-            photo: 'https://upload.wikimedia.org/wikipedia/uk/a/aa/Bart_simpson.png'
-        },
-        {
-            name: 'Homer',
-            surname: 'Simpson',
-            age: 40,
-            info: 'Гомер Джей Сімпсон (англ. Homer Jay Simpson) — один із головних героїв мультсеріалу «Сімпсони». Гомер — грубий і неввічливий батько родини, він має очевидні вади: товстий, лисий і не дуже розумний. Нерідко він поводиться як блазень, абсурдно, егоїстично і нетактовно, але все ж лишається симпатичним.',
-            photo: 'http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png'
-        },
-        {
-            name: 'Marge',
-            surname: 'Simpson',
-            age: 38,
-            info: 'Ма́рджори Жакли́н «Мардж» Си́мпсон (в девичестве Бувье́) (англ. Marjorie Jacqueline «Marge» Simpson) — постоянный персонаж мультипликационного сериала «Симпсоны», её озвучивает Джулия Кавнер. Обычно носит зелёное платье, красные балетки, на шее — ожерелье из искусственного жемчуга и ездит на оранжевом универсале. У неё шикарные синие волосы, которые она обычно собирает в очень высокую причёску. Глаза цвета ореха (19s6e). Основное занятие — домохозяйка, большую часть времени проводит в заботе о доме, детях и Гомере. Образ Мардж копирует стереотип провинциальной американской домохозяйки 50-х годов. Мардж — единственный член семьи, посещающий церковь добровольно. Старается поддерживать нравственность не только своей семьи, но и всего города. Отлично готовит, особенно славятся её свиные отбивные и зефир. Любимое блюдо — лапша с маслом.',
-            photo: 'https://upload.wikimedia.org/wikipedia/ru/0/0b/Marge_Simpson.png'
-        },
-        {
-            name: 'Lisa',
-            surname: 'Simpson',
-            age: 9,
-            info: 'Ли́за Мари́ Си́мпсон (англ. Lisa Marie Simpson) — героиня мультипликационного сериала «Симпсоны». Средний ребёнок в семье, восьмилетняя девочка, выделяющаяся среди остальных Симпсонов прежде всего своим умом и рассудительностью.',
-            photo: 'https://upload.wikimedia.org/wikipedia/ru/e/ec/Lisa_Simpson.png'
-        },
-        {
-            name: 'Maggie',
-            surname: 'Simpson',
-            age: 1,
-            info: 'Ма́ргарет Эвелин «Мэ́гги» Си́мпсон (англ. Margaret Evelyn “Maggie” Simpson) — персонаж мультсериала «Симпсоны». Впервые появилась на телевидении в шоу Трейси Ульман, в короткометражке Good Night (англ.)русск. 19 апреля 1987 года. Мэгги была придумана и разработана карикатуристом Мэттом Грейнингом, пока он ждал встречи с Джеймсом Л. Бруксом. Названа в честь младшей сестры Грейнинга. После появления в шоу Трейси Ульман, через три года семья Симпсонов получила собственный сериал на телеканале Fox, дебют произошёл 17 декабря 1989 года.',
-            photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
-        },
-    ];
+    let array = [];
+    array[0] = '1';
+    array[1] = '2';
+    array[2] = '3';
+    console.log(array);
 
-    // document.write(`<div>`)
-    // for (let simpson of simpsons) {
-    //   document.write(`<div>${simpson.name} ${simpson.surname} ${simpson.age} ${simpson.info} <img src="${simpson.photo}"> </div>`)
-    // }
-    // document.write(`</div>`);
+    // task 3
 
-    document.write(`<div style="width: 600px; margin-left: 400px; display: flex; flex-direction: column; justify-content: center;align-items: center; border: 8px solid dodgerblue">`)
-    for (let simpson of simpsons) {
-        document.write(`<h2>${simpson.name} ${simpson.surname} . Age is - ${simpson.age} </h2>
-            <p>${simpson.info}</p>
-            <img src="${simpson.photo}" alt="simpson">
-`)
-    } document.write(`</div>`);
+    for (let a = 0; a < 10; a++) {
+        document.write(`<div>default text A</div>`);
+    }
 
-    // --  template 3.1
+    for (let b = 0; b < 10; b++) {
+        document.write(`<div>${b}default text B</div>`);
+    }
 
-    let products = [
-        {
-            title: 'milk',
-            price: 22,
-            image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
-        },
-        {
-            title: 'juice',
-            price: 27,
-            image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
-        },
-        {
-            title: 'tomato',
-            price: 47,
-            image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
-        },
-        {
-            title: 'tea',
-            price: 15,
-            image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
-        },
-    ];
+    let c = 0;
+    while(c<10){
+        document.write(`<h1>default text C </h1>`);
+        c++;
+    }
 
-    for (let product of products) {
-        document.write(`<div style="width: 800px;  margin: 100px; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: powderblue">
-<h3 class="product-title">${product.title}. Price - ${product.price}</h3>
-<img class="product-image" src="${product.image}" alt="product" >
-`)
-    } document.write(`</div>`);
+    let d =0;
+    while(d<10){
+        document.write(`<h1>${d} default text D </h1>`);
+        d++;
+    }
+
+    // task 4
+
+    let numbers = [1,2,3,4,5,6,7,8,9,10];
+    for (n = 0; n < numbers.length; n++) {
+        console.log(numbers[n])
+    }
+
+    let string = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+    for (s = 0; s < string.length; s++) {
+        console.log(string[s])
+    }
+
+    let todos = [false, true, 'one', 'two', 'three', 4,5,6, 'seven', 8];
+    for (t= 0; t < todos.length; t++) {
+        console.log(todos[t])
+    }
+
+    for (x = 0; x < todos.length; x++) {
+        if (typeof todos[x] === 'boolean') {
+            console.log(todos[x]);
+        }
+    }
+
+    for (y = 0; y < todos.length; y++) {
+        if (typeof todos[y] === 'number') {
+            console.log(todos[y]);
+        }
+    }
+
+    for (z = 0; z < todos.length; z++) {
+        if (typeof todos[z] === 'string') {
+            console.log(todos[z]);
+        }
+    }
+
+    // task 5
+
+    let empty = [];
+    empty[0] = false;
+    empty[1] = true;
+    empty[2] = 1;
+    empty[3] = 2;
+    empty[4] = 3;
+    empty[5] = 'q';
+    empty[6] = 'w';
+    empty[7] = 'e';
+    empty[8] = 'r';
+    empty[9] = 10;
+
+    for (let e = 0; e < empty.length; e++) {
+        console.log(empty[e]);
+    }
+
+    for (let q = 0; q < 10; q++) {
+        console.log(q);
+        document.write(q + ' ');
+    }
+
+    for (let w = 0; w < 100; w++) {
+        console.log(w);
+        document.write(w + ' ');
+    }
+
+    for (let l = 0; l < 100; l+=2) {
+        console.log(l);
+        document.write(l + ' ');
+    }
+
+    for (let k = 0; k < 100; k++) {
+        if(k % 2 === 0){
+            console.log(k);
+            document.write(k + ' ');
+        }
+    }
+
+    for (let g = 0; g < 100; g++) {
+        if(g % 2 === 1){
+            console.log(g + ' ');
+            document.write(g + ' ');
+        }
+    }
 
 </script>
 
 </body>
 </html>
+© 2021 GitHub, Inc.
+Terms
