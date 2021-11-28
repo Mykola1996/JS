@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    // task 1
+
+    const area = (a, b) => {
+         return a * b;
+     }
+     console.log(area(15, 15));
+
+    // task 2
+
+    const areaCircle = (r) => {
+         let radius = r ** 2;
+         return 3.14 * radius;
+     }
+     console.log(areaCircle(20));
+
+    // task 3
+
+    const areaCylinder = (r, h) => {
+        return 2 * 3.14 * r * h;
+     }
+     console.log(areaCylinder(10,10));
+
+    // task 4
+
+    let array = [1,2,3,4, 'home work', 'good'];
+     const dataArray =  (array) => {
+         for (let i = 0; i < array.length; i++) {
+            document.write(array[i]);
+         }
+     }
+     dataArray(array);
+
+    // task 5
+
+    const dataP =  (text) => {
+       document.write('p>${text}</p>';
+        document.write('p>${text}</p>';
+         document.write('<hr>';
+         // // ================================== за допомогою циклу ========================
+         for (let i = 0; i <= 10; i++) {
+            document.write('p>${i} - ${text}</p>`);
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
