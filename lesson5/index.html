@@ -11,14 +11,14 @@
 
 <script>
 
-    // task 1
+    // task 1 - створити функцію яка обчислює та повертає площу прямокутника
 
     const area = (a, b) => {
          return a * b;
      }
      console.log(area(15, 15));
 
-    // task 2
+    // task 2 - створити функцію яка обчислює та повертає площу круга
 
     const areaCircle = (r) => {
          let radius = r ** 2;
@@ -26,14 +26,14 @@
      }
      console.log(areaCircle(20));
 
-    // task 3
+    // task 3 - створити функцію яка обчислює та повертає площу циліндру S= 2πRH
 
     const areaCylinder = (r, h) => {
         return 2 * 3.14 * r * h;
      }
      console.log(areaCylinder(10,10));
 
-    // task 4
+    // task 4 - створити функцію яка приймає масив та виводить кожен його елемент
 
     let array = [1,2,3,4, 'home work', 'good'];
      const dataArray =  (array) => {
@@ -43,17 +43,53 @@
      }
      dataArray(array);
 
-    // task 5
+    // task 5 - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 
-    const dataP =  (text) => {
-       document.write('p>${text}</p>';
-        document.write('p>${text}</p>';
-         document.write('<hr>';
-         // // ================================== за допомогою циклу ========================
-         for (let i = 0; i <= 10; i++) {
-            document.write('p>${i} - ${text}</p>`);
+    let paragraph =  (text) => {
+        for (let i = 0; i <= 10; i++) {
+            document.write(`<p>${i} - ${text}</p>`);
+        }
+    }; paragraph('text');
 
+    // task 6  - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
+    let list = (li) => {
+        document.write(`<ul>`);
+        document.write(`<li>${li}</li>`);
+        document.write(`<li>${li}</li>`);
+        document.write(`<li>${li}</li>`);
+        document.write(`</ul>`);
+    }; list('text2');
+
+    // task 7 - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
+    // Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+
+    let listNum = (text, quantity) => {
+        document.write(`<ul>`)
+        for (let i = 0; i < quantity; i++) {
+            document.write(`<li>${text}</li>`);
+        } document.write(`</ul>`)
+    }; listNum ('text3', 3);
+
+    // task 8 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+    let other = [1,2,3, 'four', 'five', true];
+    let table = (array) => {
+        document.write(`<ol>`)
+        for (let i = 0; i < array.length; i++) {
+            document.write(`<li>${array[i]}</li>`);
+        } document.write(`</ol>`)
+    }; table(other);
+
+    // task 9 - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
+    // Для кожного об'єкту окремий блок.
+
+    let person = [{id: 1, name: 'Vasya', age: 33}, {id: 2, name: 'Petya', age: 27}, {id: 3, name: 'Kolya', age: 19}];
+    let category = (array) => {
+        for (const p of array) {
+            document.write(`<p>${p.id}.${p.name} - ${p.age}</p>`);
+        }
+    }; category(person);
 
 </script>
 
