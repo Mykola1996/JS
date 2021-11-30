@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    // task 1 - Дано список імен.
+
+    let n1 = 'Harry..Potter';
+    let n2 = 'Ron---Whisley';
+    let n3 = 'Hermione__Granger';
+   // - Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+    let name = (string, symbol) => {
+        let array = [];
+        if (string.includes(symbol)) {
+            let a = string.split(symbol)
+            a.forEach((item) => {
+                if (item) array.push(item);
+            }); console.log(array.join(' '))
+        }
+    }
+    name(n1, '.');
+    name(n2, '-');
+    name(n3, '_');
+
+    // task 2 - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+
+    let randomizer = (length, number) => {
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            array.push(Math.floor(Math.random() * number));
+        } return array;
+    }; console.log( randomizer(3, 100));
+
+    // task 3 - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+
+    let sort = (length, number) => {
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            array.push(Math.floor(Math.random() * number));
+        }
+        return array.sort((a, b) => a - b);
+    };
+    console.log(sort(8, 100));
+
+    // task 4 - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень.
+    // відфільтрувати  його за допомоги filter, залишивши тільки парні числа
+
+    let filter = (length, number) => {
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            array.push(Math.floor(Math.random() * number));
+        }
+        return array.filter(value => value % 2 === 0);
+    };
+    console.log(filter(4, 44));
+
+    // task 5 - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) .
+    // за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+
+
+    let random = (length, number) => {
+        let array = [];
+        for (let i = 0; i < length; i++) {
+            array.push(Math.floor(Math.random() * number));
+        }
+        return array.map(value => value.toString());
+    };
+    console.log(random(5, 100));
+
+    // task 6 - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
+    // або навпаки в залежності від значення аргументу direction.
+    // ascending  [3,11,21]
+    // descending [21,11,3]
+
+    let sortNums = (array, direction) => {
+        if (direction === 'asc') return array.sort((a, b) => a - b);
+        if (direction === 'desc') return array.sort((a, b) => b - a);
+    };
+    console.log(sortNums([8, 64, 55, 13, 9, -5], 'desc') );
+
+    // task 7
+
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+
+    let desc = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration);
+    console.log(desc);
+
+    let duration = coursesAndDurationArray.filter((index) => {
+        return index.monthDuration > 5;
+    });
+    console.log(duration)
+
+
+
+</script>
+
+
+
+</body>
+</html>
